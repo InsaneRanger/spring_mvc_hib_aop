@@ -45,6 +45,11 @@ public class EmployeeDAOimpl implements EmployeeDAO {
 
         return allEmployees;
     }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+
+    }
 }
 
 
