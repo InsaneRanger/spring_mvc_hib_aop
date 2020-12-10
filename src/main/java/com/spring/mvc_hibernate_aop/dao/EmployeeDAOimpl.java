@@ -5,10 +5,12 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
+@Repository
 public class EmployeeDAOimpl implements EmployeeDAO {
     /**
      * In order to be able to connect to a session, the date
@@ -21,7 +23,6 @@ public class EmployeeDAOimpl implements EmployeeDAO {
      *
      * We are implementing a dependency on sessionfactory
      * Bean with field of class and @Autowired.
-     *
      *
      * Add @Transactional to method to manage the opening
      * and closing of a transaction
