@@ -51,7 +51,7 @@ public class EmployeeDAOimpl implements EmployeeDAO {
 
         Session session = sessionFactory.getCurrentSession();
 
-        session.save(employee);
+        session.saveOrUpdate(employee);
     }
 
     @Override
