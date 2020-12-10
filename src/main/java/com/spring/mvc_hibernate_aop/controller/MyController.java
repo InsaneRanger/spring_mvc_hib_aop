@@ -40,5 +40,9 @@ public class MyController {
 
         return "redirect:/";
     }
+    @RequestMapping("/updateInfo")
+    public String updateEmployee(){
+      return null;
+    }
 
 }
