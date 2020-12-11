@@ -1,6 +1,8 @@
 package com.spring.mvc_hibernate_aop.dao;
 
 import com.spring.mvc_hibernate_aop.entity.Employee;
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -12,6 +14,7 @@ import java.util.List;
 
 @Repository
 public class EmployeeDAOimpl implements EmployeeDAO {
+    private static final Logger LOG = LoggerFactory.getLogger(EmployeeDAOimpl.class);
     /**
      * In order to be able to connect to a session, the date
      * must have access to the session factory.

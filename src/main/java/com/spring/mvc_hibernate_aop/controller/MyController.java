@@ -2,6 +2,8 @@ package com.spring.mvc_hibernate_aop.controller;
 
 import com.spring.mvc_hibernate_aop.entity.Employee;
 import com.spring.mvc_hibernate_aop.service.EmployeeService;
+import com.sun.org.slf4j.internal.Logger;
+import com.sun.org.slf4j.internal.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +15,8 @@ import java.util.List;
 
 @Controller
 public class MyController {
+
+    private static final Logger LOG = LoggerFactory.getLogger(MyController.class);
 
     @Autowired
     private EmployeeService employeeService;
@@ -43,6 +47,7 @@ public class MyController {
     }
     @RequestMapping("/updateInfo")
     public String updateEmployee(@RequestParam("empId") int id, Model model){
+
 
         Employee employee =employeeService.getEmployee(id);
         model.addAttribute("employee", employee);
