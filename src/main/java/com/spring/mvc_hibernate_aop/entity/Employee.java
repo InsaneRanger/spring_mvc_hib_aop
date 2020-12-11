@@ -1,11 +1,15 @@
 package com.spring.mvc_hibernate_aop.entity;
 
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "employees")
 public class Employee {
+    private static final Logger LOG = LoggerFactory.getLogger(Employee.class);
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

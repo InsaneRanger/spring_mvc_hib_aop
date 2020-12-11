@@ -11,15 +11,13 @@
 
     <appender name="FILE"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>slf4jlogbackexample.log</file>
+        <file>/log/log.log</file>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- daily rollover -->
-            <fileNamePattern>slf4jlogbackexample.%d{yyyy-MM-dd}.log</fileNamePattern>
-
+            <fileNamePattern>log%d{yyyy-MM-dd}.log</fileNamePattern>
             <!-- Храним файлы логов 10 дней -->
             <maxHistory>5</maxHistory>
-
             <!-- Максимальный размер файлов лога 30 гигабайт -->
             <totalSizeCap>10MB</totalSizeCap>
 
